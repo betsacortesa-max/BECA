@@ -5,7 +5,7 @@ draft: false
 image: "/images/woman_writing.jpeg"
 ---
 
-# Hola, soy Elena
+# Hola, soy Betsa
 
 A los 25 años, he descubierto que la vida es demasiado rica y compleja para limitarse a una sola pasión. Soy una artista multifacética que encuentra inspiración en la intersección de diferentes formas de creatividad: **escritora**, **pintora**, **diseñadora de modas** y **organizadora de bodas y eventos**.
 
@@ -50,5 +50,5 @@ Cada historia que comparto aquí es una conversación que espera respuesta, una 
 Bienvenida a mi mundo, bienvenida a BECA, bienvenida a este espacio donde las palabras cobran vida y las historias encuentran su hogar.
 
 *Con amor y creatividad infinita,*  
-**Elena**
+**Betsa**
 
