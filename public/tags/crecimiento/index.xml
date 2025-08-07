@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>crecimiento on BECA</title>
+    <link>https://beca-blog.netlify.app/tags/crecimiento/</link>
+    <description>Recent content in crecimiento on BECA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Thu, 25 Jan 2024 10:20:00 +0000</lastBuildDate><atom:link href="https://beca-blog.netlify.app/tags/crecimiento/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El Lienzo en Blanco</title>
+      <link>https://beca-blog.netlify.app/posts/el-lienzo-en-blanco/</link>
+      <pubDate>Thu, 25 Jan 2024 10:20:00 +0000</pubDate>
+      
+      <guid>https://beca-blog.netlify.app/posts/el-lienzo-en-blanco/</guid>
+      <description>Una reflexión sobre los momentos de bloqueo creativo y cómo a veces el vacío es el espacio necesario para que nazca algo completamente nuevo.</description>
+    </item>
+    
+  </channel>
+</rss>

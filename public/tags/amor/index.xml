@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>amor on BECA</title>
+    <link>https://beca-blog.netlify.app/tags/amor/</link>
+    <description>Recent content in amor on BECA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Sat, 20 Jan 2024 16:45:00 +0000</lastBuildDate><atom:link href="https://beca-blog.netlify.app/tags/amor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La Boda de los Colores</title>
+      <link>https://beca-blog.netlify.app/posts/la-boda-de-los-colores/</link>
+      <pubDate>Sat, 20 Jan 2024 16:45:00 +0000</pubDate>
+      
+      <guid>https://beca-blog.netlify.app/posts/la-boda-de-los-colores/</guid>
+      <description>Una organizadora de eventos descubre que el amor verdadero no se encuentra en la perfección, sino en la belleza de los contrastes y las imperfecciones que nos hacen únicos.</description>
+    </item>
+    
+  </channel>
+</rss>

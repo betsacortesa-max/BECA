@@ -1,0 +1,141 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-10 right-10 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-golden-accent/20 rounded-full blur-xl"></div>
+    <div class="absolute bottom-20 left-10 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-coral-pink/30 rounded-full blur-lg"></div>
+    
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+            <!-- Text Content -->
+            <div class="text-center lg:text-left order-2 lg:order-1">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-charcoal mb-4 sm:mb-6 md:mb-8 leading-tight">
+                    Bienvenida a 
+                    <span class="text-warm-coral text-shadow">BECA</span>
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-charcoal/80 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Un espacio íntimo donde las palabras cobran vida. Creado por una artista multifacética de 25 años: escritora, pintora, diseñadora de modas y organizadora de eventos únicos.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
+                    <a href="{{ .Site.BaseURL }}posts/" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-warm-coral text-white font-medium rounded-full hover:bg-coral-pink transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        Explorar Historias
+                        <svg class="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="{{ .Site.BaseURL }}about/" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-warm-coral text-warm-coral font-medium rounded-full hover:bg-warm-coral hover:text-white transition-all duration-300">
+                        Conoce a la Autora
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Content -->
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div class="relative">
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500">
+                        <img src="{{ .Site.BaseURL }}images/typewriter.jpg" alt="Máquina de escribir vintage" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Floating decorative elements -->
+                    <div class="absolute -top-4 -right-4 w-8 h-8 sm:w-12 sm:h-12 bg-golden-accent rounded-full animate-pulse"></div>
+                    <div class="absolute -bottom-6 -left-6 w-6 h-6 sm:w-10 sm:h-10 bg-coral-pink rounded-full animate-bounce"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Stories Section -->
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+        <div class="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-charcoal mb-4 sm:mb-6">
+                Últimas Historias
+            </h2>
+            <p class="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+                Sumérgete en mundos de ficción donde cada palabra ha sido cuidadosamente elegida para crear experiencias inolvidables.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+            {{ range first 6 (where .Site.RegularPages "Type" "posts") }}
+            <article class="bg-soft-cream rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 group">
+                <div class="aspect-w-16 aspect-h-9 bg-rose-dust">
+                    {{ if .Params.image }}
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    {{ else }}
+                    <div class="w-full h-48 sm:h-56 md:h-64 bg-gradient-to-br from-rose-dust to-coral-pink flex items-center justify-center">
+                        <svg class="w-12 h-12 sm:w-16 sm:h-16 text-white/70" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="p-4 sm:p-6 md:p-8">
+                    <h3 class="text-lg sm:text-xl md:text-2xl font-serif font-semibold text-charcoal mb-2 sm:mb-3 group-hover:text-warm-coral transition-colors duration-300">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    <p class="text-sm sm:text-base text-charcoal/70 mb-3 sm:mb-4 leading-relaxed line-clamp-3">
+                        {{ .Summary }}
+                    </p>
+                    <div class="flex items-center justify-between text-xs sm:text-sm text-charcoal/60">
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+                        <span>{{ .ReadingTime }} min lectura</span>
+                    </div>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        
+        <div class="text-center mt-8 sm:mt-12 md:mt-16">
+            <a href="{{ .Site.BaseURL }}posts/" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-warm-coral text-warm-coral font-medium rounded-full hover:bg-warm-coral hover:text-white transform hover:scale-105 transition-all duration-300">
+                Ver Todas las Historias
+                <svg class="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-rose-dust/30">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="relative">
+                    <div class="w-full max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-xl">
+                        <img src="{{ .Site.BaseURL }}images/woman_writing.jpeg" alt="Escritora trabajando" class="w-full h-64 sm:h-80 md:h-96 object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 bg-golden-accent rounded-full flex items-center justify-center shadow-lg">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-1 lg:order-2 text-center lg:text-left">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-charcoal mb-4 sm:mb-6">
+                    Sobre la Autora
+                </h2>
+                <p class="text-base sm:text-lg md:text-xl text-charcoal/80 mb-4 sm:mb-6 leading-relaxed">
+                    A los 25 años, soy una creativa apasionada que encuentra inspiración en múltiples formas de arte. Como <span class="text-warm-coral font-semibold">escritora</span>, cada historia nace de la necesidad de explorar las profundidades del alma humana.
+                </p>
+                <p class="text-sm sm:text-base md:text-lg text-charcoal/70 mb-4 sm:mb-6 leading-relaxed">
+                    Mi trabajo como <span class="text-warm-coral font-semibold">pintora</span> me enseña a ver el mundo en colores y texturas que luego se transforman en palabras. Como <span class="text-warm-coral font-semibold">diseñadora de modas</span>, entiendo que cada detalle cuenta una historia.
+                </p>
+                <p class="text-sm sm:text-base md:text-lg text-charcoal/70 mb-6 sm:mb-8 leading-relaxed">
+                    Y como <span class="text-warm-coral font-semibold">organizadora de bodas y eventos</span>, he aprendido que los momentos más hermosos nacen cuando todos los elementos se unen en perfecta armonía. Bienvenidos a este rincón donde todas mis pasiones convergen.
+                </p>
+                <a href="{{ .Site.BaseURL }}about/" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-warm-coral text-white font-medium rounded-full hover:bg-coral-pink transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    Conoce Mi Historia
+                    <svg class="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+

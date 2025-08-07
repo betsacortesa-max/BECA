@@ -1,0 +1,52 @@
+baseURL = "https://beca-blog.netlify.app/"
+languageCode = "es"
+title = "BECA"
+theme = "beca-theme"
+
+# Pagination
+paginate = 9
+paginatePath = "page"
+
+# Markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Site parameters
+[params]
+  description = "Un espacio íntimo donde las palabras cobran vida. Creado por una artista multifacética de 25 años: escritora, pintora, diseñadora de modas y organizadora de eventos únicos."
+  author = "BECA"
+  authorAge = 25
+  authorProfessions = ["Escritora", "Pintora", "Diseñadora de Modas", "Organizadora de Eventos"]
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Historias"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Acerca de"
+    url = "/about/"
+    weight = 3
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contact/"
+    weight = 4
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+

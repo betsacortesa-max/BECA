@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Boda de los Colores - BECA</title>
+    <meta name="description" content="Un espacio íntimo donde las palabras cobran vida. Creado por una artista multifacética de 25 años: escritora, pintora, diseñadora de modas y organizadora de eventos únicos.">
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rose-dust': '#F4E4E0',
+                        'coral-pink': '#E8A598',
+                        'warm-coral': '#D4756B',
+                        'soft-cream': '#FDF8F6',
+                        'golden-accent': '#E6B17A',
+                        'charcoal': '#2D2D2D'
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+    <style>
+        .prose-custom {
+            line-height: 1.75;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #FDF8F6 0%, #F4E4E0 50%, #E8A598 100%);
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-soft-cream text-charcoal font-sans">
+    <header class="bg-white/80 backdrop-blur-sm border-b border-rose-dust/30 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+        <div class="flex justify-between items-center py-3 sm:py-4 md:py-6">
+            
+            <div class="flex items-center">
+                <a href="https://beca-blog.netlify.app/" class="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal hover:text-warm-coral transition-all duration-300 transform hover:scale-105">
+                    BECA
+                </a>
+            </div>
+            
+            
+            <nav class="hidden lg:flex space-x-6 xl:space-x-8">
+                <a href="https://beca-blog.netlify.app/" class="text-sm md:text-base text-charcoal hover:text-warm-coral transition-all duration-300 font-medium relative group">
+                    Inicio
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-warm-coral transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://beca-blog.netlify.app/posts/" class="text-sm md:text-base text-charcoal hover:text-warm-coral transition-all duration-300 font-medium relative group">
+                    Historias
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-warm-coral transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://beca-blog.netlify.app/about/" class="text-sm md:text-base text-charcoal hover:text-warm-coral transition-all duration-300 font-medium relative group">
+                    Acerca de
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-warm-coral transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://beca-blog.netlify.app/contact/" class="text-sm md:text-base text-charcoal hover:text-warm-coral transition-all duration-300 font-medium relative group">
+                    Contacto
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-warm-coral transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+            
+            
+            <nav class="hidden md:flex lg:hidden space-x-4">
+                <a href="https://beca-blog.netlify.app/" class="text-sm text-charcoal hover:text-warm-coral transition-colors duration-300 font-medium">Inicio</a>
+                <a href="https://beca-blog.netlify.app/posts/" class="text-sm text-charcoal hover:text-warm-coral transition-colors duration-300 font-medium">Historias</a>
+                <a href="https://beca-blog.netlify.app/about/" class="text-sm text-charcoal hover:text-warm-coral transition-colors duration-300 font-medium">Acerca</a>
+                <a href="https://beca-blog.netlify.app/contact/" class="text-sm text-charcoal hover:text-warm-coral transition-colors duration-300 font-medium">Contacto</a>
+            </nav>
+            
+            
+            <div class="md:hidden">
+                <button type="button" class="text-charcoal hover:text-warm-coral transition-all duration-300 p-2 rounded-lg hover:bg-rose-dust/20" onclick="toggleMobileMenu()">
+                    <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        
+        <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-rose-dust/20 mt-2">
+            <div class="space-y-3 pt-4">
+                <a href="https://beca-blog.netlify.app/" class="block text-charcoal hover:text-warm-coral transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-rose-dust/20">Inicio</a>
+                <a href="https://beca-blog.netlify.app/posts/" class="block text-charcoal hover:text-warm-coral transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-rose-dust/20">Historias</a>
+                <a href="https://beca-blog.netlify.app/about/" class="block text-charcoal hover:text-warm-coral transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-rose-dust/20">Acerca de</a>
+                <a href="https://beca-blog.netlify.app/contact/" class="block text-charcoal hover:text-warm-coral transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-rose-dust/20">Contacto</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+}
+</script>
+
+
+    
+    <main>
+        
+<article class="bg-soft-cream min-h-screen">
+    
+    <header class="relative overflow-hidden">
+        
+        <div class="h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] relative">
+            <img src="/images/woman_writing.jpeg" alt="La Boda de los Colores" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
+        
+        
+        
+        <div class="absolute inset-0 flex items-end">
+            <div class="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 pb-8 sm:pb-12 md:pb-16 lg:pb-20 w-full">
+                
+                <div class="flex flex-wrap items-center gap-2 sm:gap-4 mb-4 sm:mb-6">
+                    
+                    <span class="inline-block px-3 sm:px-4 py-1 sm:py-2 bg-warm-coral text-white text-xs sm:text-sm font-medium rounded-full">
+                        Ficción
+                    </span>
+                    
+                    <time datetime="2024-01-20" class="text-white/90 text-xs sm:text-sm font-medium">
+                        20 January 2024
+                    </time>
+                    <span class="text-white/90 text-xs sm:text-sm font-medium">
+                        7 min de lectura
+                    </span>
+                </div>
+                
+                
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white mb-4 sm:mb-6 leading-tight text-shadow">
+                    La Boda de los Colores
+                </h1>
+                
+                
+                
+                <p class="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed">
+                    Una organizadora de eventos descubre que el amor verdadero no se encuentra en la perfección, sino en la belleza de los contrastes y las imperfecciones que nos hacen únicos.
+                </p>
+                
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="py-8 sm:py-12 md:py-16 lg:py-20">
+        <div class="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            
+            <div class="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg mb-8 sm:mb-12 md:mb-16">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg flex-shrink-0">
+                        <img src="https://beca-blog.netlify.app/images/woman_writing.jpeg" alt="Autora" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-center sm:text-left flex-1">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-2">
+                            Autora
+                        </h3>
+                        <p class="text-sm sm:text-base text-charcoal/70 leading-relaxed">
+                            Escritora, pintora, diseñadora de modas y organizadora de eventos de 25 años. Cada historia nace de la pasión por explorar las múltiples facetas del arte y la vida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="prose prose-lg sm:prose-xl max-w-none prose-custom">
+                <div class="text-base sm:text-lg md:text-xl leading-relaxed text-charcoal space-y-4 sm:space-y-6 md:space-y-8">
+                    <p>Nunca había organizado una boda donde los novios no pudieran ponerse de acuerdo en nada. Literalmente, en nada. Él quería azul marino, ella quería rosa coral. Él prefería una ceremonia íntima, ella soñaba con una celebración grandiosa. Él era minimalista, ella maximalista. Parecía una misión imposible, pero yo, Elena, a mis veinticinco años y con cientos de eventos exitosos en mi haber, nunca había rechazado un desafío.</p>
+<p>La primera reunión fue un desastre. Marco y Valentina se sentaron en extremos opuestos de mi oficina, como si fuera una mediación de divorcio en lugar de la planificación de su boda. Cada sugerencia que hacía era inmediatamente vetada por uno de los dos.</p>
+<p>&ldquo;¿Flores blancas?&rdquo; propuse, intentando encontrar un punto neutral.</p>
+<p>&ldquo;Demasiado aburrido&rdquo;, dijo Valentina.</p>
+<p>&ldquo;Demasiado tradicional&rdquo;, añadió Marco.</p>
+<p>Después de dos horas de tensión, decidí hacer algo que nunca había hecho antes. Cerré mi cuaderno de notas, me levanté y les dije: &ldquo;Necesito que me cuenten cómo se enamoraron.&rdquo;</p>
+<p>La transformación fue inmediata. Sus rostros se suavizaron, sus posturas se relajaron, y por primera vez en toda la reunión, se miraron a los ojos.</p>
+<p>Marco comenzó: &ldquo;Fue en una galería de arte. Yo estaba admirando una pintura abstracta en tonos azules, muy serena y minimalista. Ella estaba frente a una obra explosiva, llena de colores vibrantes y formas caóticas.&rdquo;</p>
+<p>Valentina continuó: &ldquo;Comenzamos a discutir sobre arte. Él defendía la belleza de la simplicidad, yo la riqueza de la complejidad. Discutimos durante horas, pero era la discusión más estimulante que había tenido en mi vida.&rdquo;</p>
+<p>&ldquo;Y entonces&rdquo;, dijo Marco, tomando su mano, &ldquo;nos dimos cuenta de que no estábamos discutiendo. Estábamos creando algo nuevo juntos. Cada uno aportaba su perspectiva, y el resultado era más rico que cualquiera de nuestras visiones individuales.&rdquo;</p>
+<p>En ese momento, tuve una epifanía. Como artista multifacética, yo entendía perfectamente lo que ellos habían experimentado. En mi trabajo como pintora, había aprendido que los colores más hermosos surgen cuando mezclas tonos aparentemente incompatibles. En mi escritura, las mejores historias nacen del conflicto y la resolución. En el diseño de modas, las piezas más impactantes combinan elementos contrastantes de manera armoniosa.</p>
+<p>&ldquo;¿Y si no intentamos que se pongan de acuerdo?&rdquo;, les propuse. &ldquo;¿Y si creamos una boda que celebre exactamente eso que los enamoró: la belleza de sus diferencias?&rdquo;</p>
+<p>Sus ojos se iluminaron con curiosidad.</p>
+<p>Durante las siguientes semanas, trabajamos en un concepto completamente revolucionario. La ceremonia tendría dos mitades: una minimalista y serena para Marco, otra vibrante y exuberante para Valentina. Pero en lugar de dividirlas, las entrelazaríamos como los colores en una pintura abstracta.</p>
+<p>El altar estaría dividido por una línea invisible. Del lado de Marco, flores blancas y verdes en arreglos geométricos simples, telas en tonos neutros, líneas limpias. Del lado de Valentina, explosiones de color en fucsia, naranja y dorado, texturas ricas, formas orgánicas y abundantes.</p>
+<p>Pero aquí venía la magia: en el centro, donde ellos se encontrarían para intercambiar votos, los dos estilos se fusionarían gradualmente. Las flores blancas tendrían toques sutiles de color, los arreglos vibrantes incorporarían elementos de simplicidad elegante.</p>
+<p>Para la recepción, diseñé algo aún más ambicioso. Cada mesa representaría un momento diferente de su relación. La mesa donde se conocieron tendría elementos de galería de arte, con pequeñas obras que combinaran estilos minimalistas y maximalistas. La mesa de su primera cita estaría decorada como el café donde fueron, con elementos simples pero toques de color en los detalles.</p>
+<p>El menú también reflejaría sus personalidades. Platos principales elegantes y refinados para satisfacer el gusto de Marco, acompañados de guarniciones exóticas y coloridas que deleitarían a Valentina.</p>
+<p>Pero el verdadero desafío llegó dos semanas antes de la boda. Valentina me llamó llorando. &ldquo;Elena, creo que cometimos un error. ¿Y si todo esto es demasiado complicado? ¿Y si nuestras diferencias son demasiado grandes?&rdquo;</p>
+<p>Esa noche, trabajé hasta muy tarde en mi taller, no en los últimos detalles de la boda, sino en algo especial para ella. Combiné mis habilidades como diseñadora y pintora para crear un regalo único: un cuadro que representara su historia de amor.</p>
+<p>En el lienzo, pinté dos figuras abstractas que comenzaban en extremos opuestos, una en tonos fríos y líneas simples, otra en colores cálidos y formas complejas. Pero a medida que avanzaban hacia el centro, comenzaban a intercambiar elementos. La figura fría adquiría toques de calidez, la figura cálida encontraba momentos de serenidad. En el punto donde se encontraban, creaban algo completamente nuevo: una explosión de belleza que no podría haber existido sin ambas perspectivas.</p>
+<p>Al día siguiente, llevé el cuadro a Valentina. Cuando lo vio, sus ojos se llenaron de lágrimas, pero esta vez de alegría. &ldquo;Es perfecto&rdquo;, susurró. &ldquo;Somos perfectos juntos, no a pesar de nuestras diferencias, sino gracias a ellas.&rdquo;</p>
+<p>El día de la boda fue mágico. Cuando los invitados llegaron, hubo un momento de sorpresa al ver el diseño aparentemente dividido. Pero a medida que la ceremonia progresaba, comenzaron a entender el concepto. Cuando Marco y Valentina se encontraron en el centro del altar, donde sus dos mundos se fusionaban, no había una sola persona que no estuviera emocionada.</p>
+<p>Los votos que intercambiaron fueron una obra de arte en sí mismos. Marco prometió añadir color a su mundo ordenado, Valentina prometió encontrar momentos de paz en su vida vibrante. Juntos, prometieron crear algo nuevo cada día, algo que fuera únicamente suyo.</p>
+<p>Durante la recepción, algo hermoso sucedió. Los invitados comenzaron a moverse entre las diferentes mesas, explorando los distintos momentos de la historia de amor de la pareja. Las conversaciones se volvieron más profundas, las conexiones más auténticas. Era como si la celebración de las diferencias de Marco y Valentina hubiera dado permiso a todos los presentes para celebrar también sus propias complejidades.</p>
+<p>Al final de la noche, mientras ayudaba a limpiar, encontré a la pareja sentada en el jardín, admirando las luces que habíamos colgado. Algunas eran simples y elegantes, otras coloridas y caprichosas, pero todas juntas creaban una atmósfera mágica.</p>
+<p>&ldquo;Gracias&rdquo;, me dijo Valentina. &ldquo;No solo por organizar nuestra boda, sino por enseñarnos que el amor no se trata de encontrar a alguien igual a ti.&rdquo;</p>
+<p>&ldquo;Se trata de encontrar a alguien que te inspire a ser la mejor versión de ti mismo&rdquo;, añadió Marco, &ldquo;y que te permita hacer lo mismo por él.&rdquo;</p>
+<p>Esa noche, mientras conducía de regreso a casa, reflexioné sobre lo que había aprendido. Como organizadora de eventos, siempre había pensado que mi trabajo era crear perfección. Pero esta boda me enseñó que la verdadera belleza está en la imperfección armoniosa, en la celebración de los contrastes, en la creación de algo nuevo a partir de elementos aparentemente incompatibles.</p>
+<p>En mi propia vida, había estado tratando de mantener separadas mis diferentes pasiones: la escritura, la pintura, el diseño, la organización de eventos. Pero Marco y Valentina me mostraron que la magia sucede cuando permitimos que nuestras diferentes facetas se entrelacen y se nutran mutuamente.</p>
+<p>Desde esa boda, mi enfoque cambió completamente. Ya no busco crear eventos perfectos, sino eventos auténticos que celebren la complejidad y la belleza única de cada historia de amor. Cada pareja tiene su propia paleta de colores, su propia combinación de elementos aparentemente contradictorios que, cuando se unen con amor y respeto, crean algo extraordinario.</p>
+<p>Y yo, con mis veinticinco años y mi corazón lleno de historias, he aprendido que la vida, como el arte, es más hermosa cuando abraza todos sus colores, todas sus texturas, todas sus contradicciones. Porque al final, somos obras de arte en constante creación, y las mejores obras son aquellas que no temen mostrar toda su complejidad.</p>
+<p>La boda de los colores se convirtió en mi firma, en mi manera de recordar que el amor verdadero no busca la uniformidad, sino la armonía en la diversidad. Y cada vez que organizo un evento, llevo conmigo esa lección: que la belleza más profunda surge cuando celebramos no solo lo que nos une, sino también lo que nos hace únicos.</p>
+
+                </div>
+            </div>
+
+            
+            
+            <div class="mt-8 sm:mt-12 md:mt-16 pt-6 sm:pt-8 border-t border-rose-dust/30">
+                <h4 class="text-base sm:text-lg font-semibold text-charcoal mb-3 sm:mb-4">Etiquetas:</h4>
+                <div class="flex flex-wrap gap-2 sm:gap-3">
+                    
+                    <span class="inline-block px-3 sm:px-4 py-1 sm:py-2 bg-rose-dust/50 text-charcoal/80 rounded-full text-sm sm:text-base hover:bg-warm-coral hover:text-white transition-colors duration-300 cursor-pointer">
+                        #bodas
+                    </span>
+                    
+                    <span class="inline-block px-3 sm:px-4 py-1 sm:py-2 bg-rose-dust/50 text-charcoal/80 rounded-full text-sm sm:text-base hover:bg-warm-coral hover:text-white transition-colors duration-300 cursor-pointer">
+                        #eventos
+                    </span>
+                    
+                    <span class="inline-block px-3 sm:px-4 py-1 sm:py-2 bg-rose-dust/50 text-charcoal/80 rounded-full text-sm sm:text-base hover:bg-warm-coral hover:text-white transition-colors duration-300 cursor-pointer">
+                        #amor
+                    </span>
+                    
+                    <span class="inline-block px-3 sm:px-4 py-1 sm:py-2 bg-rose-dust/50 text-charcoal/80 rounded-full text-sm sm:text-base hover:bg-warm-coral hover:text-white transition-colors duration-300 cursor-pointer">
+                        #creatividad
+                    </span>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="mt-8 sm:mt-12 md:mt-16 pt-6 sm:pt-8 border-t border-rose-dust/30">
+                <h4 class="text-base sm:text-lg font-semibold text-charcoal mb-3 sm:mb-4">Compartir esta historia:</h4>
+                <div class="flex flex-wrap gap-3 sm:gap-4">
+                    <a href="https://twitter.com/intent/tweet?text=La%20Boda%20de%20los%20Colores&url=https%3a%2f%2fbeca-blog.netlify.app%2fposts%2fla-boda-de-los-colores%2f" target="_blank" class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm sm:text-base">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                        Twitter
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbeca-blog.netlify.app%2fposts%2fla-boda-de-los-colores%2f" target="_blank" class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-sm sm:text-base">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        Facebook
+                    </a>
+                    <button onclick="copyToClipboard('https:\/\/beca-blog.netlify.app\/posts\/la-boda-de-los-colores\/')" class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-warm-coral text-white rounded-lg hover:bg-coral-pink transition-colors duration-300 text-sm sm:text-base">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                        Copiar enlace
+                    </button>
+                </div>
+            </div>
+
+            
+            <nav class="mt-8 sm:mt-12 md:mt-16 pt-6 sm:pt-8 border-t border-rose-dust/30">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    
+                    <a href="https://beca-blog.netlify.app/posts/el-vestido-de-luna/" class="group p-4 sm:p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="text-xs sm:text-sm text-warm-coral font-medium mb-2">← Historia Anterior</div>
+                        <h4 class="text-sm sm:text-base md:text-lg font-serif font-semibold text-charcoal group-hover:text-warm-coral transition-colors duration-300 line-clamp-2">
+                            El Vestido de Luna
+                        </h4>
+                    </a>
+                    
+                    
+                    
+                    <a href="https://beca-blog.netlify.app/posts/el-lienzo-en-blanco/" class="group p-4 sm:p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-right">
+                        <div class="text-xs sm:text-sm text-warm-coral font-medium mb-2">Historia Siguiente →</div>
+                        <h4 class="text-sm sm:text-base md:text-lg font-serif font-semibold text-charcoal group-hover:text-warm-coral transition-colors duration-300 line-clamp-2">
+                            El Lienzo en Blanco
+                        </h4>
+                    </a>
+                    
+                </div>
+            </nav>
+
+            
+            <div class="text-center mt-8 sm:mt-12 md:mt-16">
+                <a href="https://beca-blog.netlify.app/posts/" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-warm-coral text-white font-medium rounded-full hover:bg-coral-pink transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    <svg class="mr-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+                    </svg>
+                    Volver a Todas las Historias
+                </a>
+            </div>
+        </div>
+    </main>
+</article>
+
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        
+        const button = event.target.closest('button');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>¡Copiado!';
+        setTimeout(() => {
+            button.innerHTML = originalText;
+        }, 2000);
+    });
+}
+</script>
+
+    </main>
+    
+    <footer class="bg-charcoal text-white">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 py-8 sm:py-12 md:py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+            
+            <div class="sm:col-span-2 lg:col-span-1">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-white mb-3 sm:mb-4">
+                    BECA
+                </h3>
+                <p class="text-sm sm:text-base text-white/80 mb-4 sm:mb-6 leading-relaxed">
+                    Donde las palabras cobran vida y las historias encuentran su hogar. Un espacio creado con amor por una artista multifacética.
+                </p>
+                <div class="flex space-x-4">
+                    
+                    <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 bg-warm-coral rounded-full flex items-center justify-center hover:bg-coral-pink transform hover:scale-110 transition-all duration-300">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 bg-warm-coral rounded-full flex items-center justify-center hover:bg-coral-pink transform hover:scale-110 transition-all duration-300">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 bg-warm-coral rounded-full flex items-center justify-center hover:bg-coral-pink transform hover:scale-110 transition-all duration-300">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            
+            <div>
+                <h4 class="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2 sm:space-y-3">
+                    <li><a href="https://beca-blog.netlify.app/" class="text-sm sm:text-base text-white/80 hover:text-warm-coral transition-colors duration-300">Inicio</a></li>
+                    <li><a href="https://beca-blog.netlify.app/posts/" class="text-sm sm:text-base text-white/80 hover:text-warm-coral transition-colors duration-300">Todas las Historias</a></li>
+                    <li><a href="https://beca-blog.netlify.app/about/" class="text-sm sm:text-base text-white/80 hover:text-warm-coral transition-colors duration-300">Acerca de</a></li>
+                    <li><a href="https://beca-blog.netlify.app/contact/" class="text-sm sm:text-base text-white/80 hover:text-warm-coral transition-colors duration-300">Contacto</a></li>
+                </ul>
+            </div>
+            
+            
+            <div>
+                <h4 class="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Mis Pasiones</h4>
+                <ul class="space-y-2 sm:space-y-3">
+                    <li><span class="text-sm sm:text-base text-white/80">Escritura Creativa</span></li>
+                    <li><span class="text-sm sm:text-base text-white/80">Pintura</span></li>
+                    <li><span class="text-sm sm:text-base text-white/80">Diseño de Modas</span></li>
+                    <li><span class="text-sm sm:text-base text-white/80">Organización de Eventos</span></li>
+                </ul>
+            </div>
+            
+            
+            <div>
+                <h4 class="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Mantente Conectada</h4>
+                <p class="text-sm sm:text-base text-white/80 mb-3 sm:mb-4">Recibe las últimas historias directamente en tu correo.</p>
+                <form class="space-y-3">
+                    <input type="email" placeholder="Tu email" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-warm-coral focus:border-transparent text-sm sm:text-base">
+                    <button type="submit" class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-warm-coral text-white font-medium rounded-lg hover:bg-coral-pink transition-colors duration-300 text-sm sm:text-base">
+                        Suscribirse
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        
+        <div class="border-t border-white/20 mt-8 sm:mt-12 pt-6 sm:pt-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <p class="text-xs sm:text-sm text-white/60 text-center sm:text-left">
+                    © 2025 BECA. Todos los derechos reservados. Hecho con ❤️ y mucha creatividad.
+                </p>
+                <div class="flex space-x-4 sm:space-x-6">
+                    <a href="#" class="text-xs sm:text-sm text-white/60 hover:text-warm-coral transition-colors duration-300">Política de Privacidad</a>
+                    <a href="#" class="text-xs sm:text-sm text-white/60 hover:text-warm-coral transition-colors duration-300">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
