@@ -1,0 +1,13 @@
+{
+  "name": "beca-blog",
+  "version": "1.0.0",
+  "description": "Blog minimalista para escritora multifacética",
+  "scripts": {
+    "dev": "hugo server -D --bind 0.0.0.0 --port 1313",
+    "build": "hugo --minify",
+    "preview": "hugo server --environment production"
+  },
+  "keywords": ["hugo", "blog", "escritura", "arte"],
+  "author": "Elena - BECA",
+  "license": "MIT"
+}

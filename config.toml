@@ -3,6 +3,11 @@ languageCode = "es"
 title = "BECA"
 theme = "beca-theme"
 
+# Build settings
+buildDrafts = false
+buildFuture = false
+canonifyURLs = true
+
 # Pagination
 paginate = 9
 paginatePath = "page"
@@ -17,8 +22,14 @@ paginatePath = "page"
 [params]
   description = "Un espacio íntimo donde las palabras cobran vida. Creado por una artista multifacética de 25 años: escritora, pintora, diseñadora de modas y organizadora de eventos únicos."
   author = "BECA"
+  authorName = "Elena"
   authorAge = 25
   authorProfessions = ["Escritora", "Pintora", "Diseñadora de Modas", "Organizadora de Eventos"]
+  
+  # Social media (opcional)
+  twitter = ""
+  instagram = ""
+  pinterest = ""
 
 # Menu configuration
 [menu]
