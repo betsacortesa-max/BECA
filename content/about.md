@@ -2,6 +2,7 @@
 title: "Acerca de Mí"
 date: 2024-01-01T00:00:00Z
 draft: false
+image: "/images/woman_writing.jpeg"
 ---
 
 # Hola, soy Elena

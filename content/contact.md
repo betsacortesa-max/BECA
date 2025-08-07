@@ -2,6 +2,7 @@
 title: "Contacto"
 date: 2024-01-01T00:00:00Z
 draft: false
+image: "/images/writing_desk.jpg"
 ---
 
 # Conectemos

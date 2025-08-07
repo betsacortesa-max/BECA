@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "hugo server -D --bind 0.0.0.0 --port 1313",
     "build": "hugo --minify",
-    "preview": "hugo server --environment production"
+    "preview": "hugo server --environment production",
+    "new": "node scripts/new-post.js",
+    "draft": "hugo server -D --bind 0.0.0.0 --port 1313 --navigateToChanged"
   },
   "keywords": ["hugo", "blog", "escritura", "arte"],
   "author": "Elena - BECA",
