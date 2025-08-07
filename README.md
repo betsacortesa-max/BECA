@@ -1,16 +1,16 @@
 # BECA - Blog Minimalista para Escritora
 
-Un blog elegante y minimalista creado con Hugo, diseñado específicamente para una escritora multifacética de 25 años que también es pintora, diseñadora de modas y organizadora de eventos.
+Un blog elegante y minimalista creado con Hugo, diseñado específicamente para Elena, una escritora multifacética de 25 años que también es pintora, diseñadora de modas y organizadora de eventos.
 
 ## Características
 
-- **Diseño altamente responsive** que se adapta perfectamente a móviles, tablets y desktop
-- **Paleta de colores elegante** inspirada en tonos rosa coral, crema y dorado
-- **Tipografía cuidadosamente seleccionada** con Playfair Display para títulos y Inter para texto
-- **Tailwind CSS** para estilos modernos y mantenibles
-- **Imágenes libres de copyright** de Unsplash, Pexels y Pixabay
-- **Contenido de ejemplo** con 3 historias completas
-- **Navegación intuitiva** y experiencia de usuario optimizada
+- ✨ **Diseño altamente responsive** que se adapta perfectamente a móviles, tablets y desktop
+- 🎨 **Paleta de colores pastel** en tonos rosa coral, arena y crema suaves
+- 📝 **Flujo de trabajo optimizado** para escritoras - crea posts rápidamente en Markdown
+- 🎭 **Tipografía elegante** con Playfair Display para títulos e Inter para texto
+- ⚡ **Hugo + Tailwind CSS** para rendimiento y mantenibilidad
+- 📱 **Completamente responsive** con micro-interacciones elegantes
+- 🖼️ **Sistema de imágenes local** - todas las imágenes se almacenan en el proyecto
 
 ## Estructura del Proyecto
 
@@ -37,79 +37,107 @@ BECA/
 
 ### Pasos para usar el blog
 
-1. **Extraer el archivo ZIP**
+1. **Clonar o descargar el proyecto**
    ```bash
-   unzip BECA-blog.zip
    cd BECA
    ```
 
-2. **Instalar Hugo** (si no está instalado)
+2. **Instalar dependencias**
    ```bash
-   # En Ubuntu/Debian
-   sudo apt-get install hugo
-   
-   # En macOS con Homebrew
-   brew install hugo
-   
-   # En Windows con Chocolatey
-   choco install hugo
+   npm install
    ```
 
 3. **Ejecutar el servidor de desarrollo**
    ```bash
-   hugo server -D
+   npm run dev
    ```
    El sitio estará disponible en `http://localhost:1313`
 
 4. **Generar el sitio para producción**
    ```bash
-   hugo
+   npm run build
    ```
    Los archivos generados estarán en la carpeta `public/`
+
+## Flujo de Trabajo para Escritoras
+
+### Crear una nueva historia rápidamente
+
+```bash
+npm run new
+```
+
+Este comando te guiará paso a paso para crear un nuevo post con toda la metadata necesaria.
+
+### Escribir en modo borrador
+
+```bash
+npm run draft
+```
+
+Esto inicia el servidor con borradores visibles y recarga automática cuando guardas cambios.
 
 ## Personalización
 
 ### Agregar nuevas historias
 
-1. Crear un nuevo archivo en `content/posts/`:
+1. **Método rápido** (recomendado):
    ```bash
-   hugo new posts/mi-nueva-historia.md
+   npm run new
    ```
 
-2. Editar el archivo con tu contenido:
+2. **Método manual**:
+   Crear archivo en `content/posts/mi-historia.md`:
    ```markdown
    ---
    title: "Título de tu historia"
-   date: 2024-01-30T10:00:00Z
+   date: 2025-01-30T10:00:00Z
    draft: false
    image: "/images/tu-imagen.jpg"
-   category: "Ficción"
-   tags: ["tag1", "tag2"]
+   category: "Relato"
+   tags: ["escritura", "creatividad"]
    summary: "Resumen de tu historia"
    ---
    
    Contenido de tu historia aquí...
    ```
 
-### Cambiar colores y estilos
-
-Los colores principales están definidos en `themes/beca-theme/layouts/_default/baseof.html` en la configuración de Tailwind:
-
-```javascript
-colors: {
-    'rose-dust': '#F4E4E0',
-    'coral-pink': '#E8A598',
-    'warm-coral': '#D4756B',
-    'soft-cream': '#FDF8F6',
-    'golden-accent': '#E6B17A',
-    'charcoal': '#2D2D2D'
-}
-```
-
 ### Agregar imágenes
 
 1. Coloca las imágenes en `static/images/`
 2. Referéncialas en tu contenido como `/images/nombre-imagen.jpg`
+3. Formatos recomendados: JPG, PNG, WebP
+4. Tamaño recomendado: 1200x800px para imágenes principales
+
+### Personalizar colores
+
+Los colores están definidos en `themes/beca-theme/layouts/_default/baseof.html`:
+
+```javascript
+colors: {
+    'rose-dust': '#F5E6E8',      // Rosa polvo suave
+    'coral-pink': '#F4C2C2',     // Rosa coral pastel
+    'warm-coral': '#E8B4B8',     // Coral cálido
+    'soft-cream': '#FEF7F0',     // Crema suave
+    'golden-accent': '#F0D5A8',  // Dorado arena
+    'sand-pastel': '#F5F0E8',    // Arena pastel
+    'charcoal': '#2D2D2D'
+}
+```
+
+## Tipos de Contenido
+
+### Categorías Sugeridas
+- **Relato**: Historias cortas de ficción
+- **Cuento**: Narrativas más largas
+- **Blog**: Reflexiones personales
+- **Consejo**: Tips sobre arte, moda, eventos
+- **Inspiración**: Pensamientos creativos
+
+### Tags Recomendados
+- `escritura`, `creatividad`, `arte`, `moda`, `eventos`, `bodas`
+- `inspiración`, `consejos`, `reflexión`, `ficción`, `personal`
+- `diseño`, `pintura`, `storytelling`, `emprendimiento`
 
 ## Deployment
 
@@ -132,37 +160,42 @@ colors: {
 ## Características Técnicas
 
 - **Framework**: Hugo (Static Site Generator)
-- **CSS Framework**: Tailwind CSS (vía CDN)
+- **CSS Framework**: Tailwind CSS (vía CDN) con configuración personalizada
 - **Tipografías**: Google Fonts (Playfair Display + Inter)
-- **Responsive Design**: Mobile-first approach
-- **SEO**: Meta tags optimizados
-- **Performance**: Sitio estático ultra-rápido
+- **Responsive Design**: Mobile-first con breakpoints optimizados
+- **SEO**: Meta tags optimizados para redes sociales
+- **Performance**: Sitio estático ultra-rápido con imágenes optimizadas
+- **Workflow**: Scripts automatizados para crear contenido
 
-## Contenido Incluido
+## Comandos Útiles
 
-### Historias de Ejemplo
-1. **"El Vestido de Luna"** - Una historia sobre el poder transformador de la moda
-2. **"La Boda de los Colores"** - Reflexión sobre el amor y las diferencias
-3. **"El Lienzo en Blanco"** - Exploración del bloqueo creativo
+```bash
+# Crear nueva historia (interactivo)
+npm run new
 
-### Páginas Estáticas
-- **Inicio**: Presentación elegante con hero section
-- **Historias**: Lista de todas las publicaciones
-- **Acerca de**: Información sobre la autora
-- **Contacto**: Formulario y información de contacto
+# Servidor de desarrollo (incluye borradores)
+npm run draft
+
+# Servidor de desarrollo (solo publicados)
+npm run dev
+
+# Construir para producción
+npm run build
+
+# Vista previa del sitio construido
+npm run preview
+```
 
 ## Soporte
 
-Para cualquier duda o personalización adicional, consulta la documentación oficial de Hugo en https://gohugo.io/documentation/
+- 📚 [Documentación de Hugo](https://gohugo.io/documentation/)
+- 🎨 [Guía de Tailwind CSS](https://tailwindcss.com/docs)
+- ✍️ [Sintaxis de Markdown](https://www.markdownguide.org/basic-syntax/)
 
 ## Licencia
 
-Este tema es de uso libre. Las imágenes incluidas son libres de copyright y provienen de:
-- Unsplash (unsplash.com)
-- Pexels (pexels.com)
-- Pixabay (pixabay.com)
+Este tema es de uso libre para proyectos personales.
 
 ---
 
-**¡Disfruta creando contenido hermoso con BECA!** ✨
-
+**¡Disfruta escribiendo y compartiendo tus historias con BECA!** ✨📝
