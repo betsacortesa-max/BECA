@@ -22,7 +22,7 @@ paginatePath = "page"
 [params]
   description = "Un espacio íntimo donde las palabras cobran vida. Creado por una artista multifacética de 25 años: escritora, pintora, diseñadora de modas y organizadora de eventos únicos."
   author = "BECA"
-  authorName = "Elena"
+  authorName = "Betsa"
   authorAge = 25
   authorProfessions = ["Escritora", "Pintora", "Diseñadora de Modas", "Organizadora de Eventos"]
   
