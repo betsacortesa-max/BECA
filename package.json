@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "description": "Blog minimalista para escritora multifacética - Migrado a Astro",
   "keywords": ["astro", "blog", "escritura", "arte"],
-  "author": "Betsabe - BECA"
+  "author": "Betsabe - BECA",
   "scripts": {
-    "dev": "hugo server -D --bind 0.0.0.0 --port 1313",
-    "build": "hugo --minify",
-    "preview": "hugo server --environment production",
-    "new": "node scripts/new-post.js",
-    "astro": "astro",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "new": "node scripts/new-post.js"
   },
-  "keywords": ["hugo", "blog", "escritura", "arte"],
-  "author": "Elena - BECA",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "astro": "^3.0.0"
+  }
 }
