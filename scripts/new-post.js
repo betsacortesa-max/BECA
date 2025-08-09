@@ -19,7 +19,7 @@ function slugify(text) {
 
 function createPost() {
   rl.question('Título de tu historia: ', (title) => {
-    rl.question('Categoría (Relato/Cuento/Blog/Consejo): ', (category) => {
+    rl.question('Categoría (Relato/Cuento/Blog/Consejo/Reflexión/Ficción): ', (category) => {
       rl.question('Tags (separados por comas): ', (tagsInput) => {
         rl.question('Resumen breve: ', (summary) => {
           
@@ -31,15 +31,17 @@ function createPost() {
 title: "${title}"
 date: ${date}
 draft: false
-image: "/images/"
+image: "https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?auto=compress&cs=tinysrgb&w=800"
 category: "${category}"
 tags: [${tags}]
 summary: "${summary}"
 ---
 
+Escribe aquí tu historia...
+
 `;
 
-          const fileName = `content/posts/${slug}.md`;
+          const fileName = `src/pages/posts/${slug}.md`;
           
           // Crear el directorio si no existe
           const dir = path.dirname(fileName);
@@ -51,7 +53,7 @@ summary: "${summary}"
           
           console.log(`\n✅ Post creado: ${fileName}`);
           console.log(`📝 Ahora puedes editarlo y agregar tu contenido`);
-          console.log(`🖼️  No olvides agregar una imagen en /static/images/`);
+          console.log(`🖼️  Cambia la imagen URL por una de Pexels apropiada`);
           console.log(`🚀 Para publicar, cambia draft: false y ejecuta: npm run build`);
           
           rl.close();
@@ -61,5 +63,5 @@ summary: "${summary}"
   });
 }
 
-console.log('🌸 Crear nueva historia para BECA\n');
+console.log('🌸 Crear nueva historia para BECA (Astro)\n');
 createPost();

@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PostCard from '../../components/PostCard.astro';
+
+// Get all posts
+const allPosts = await Astro.glob('./*.md');
+const posts = allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+---
+
+<Layout title="Todas las Historias - BECA">
+  <Header />
+  
+  <div class="bg-gradient-to-br from-soft-cream via-rose-dust/20 to-soft-cream min-h-screen">
+    <!-- Header Section -->
+    <section class="py-12 sm:py-16 md:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+        <div class="text-center mb-8 sm:mb-12 md:mb-16">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-charcoal mb-4 sm:mb-6">
+            Todas las Historias
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+            Explora mi colección de cuentos y relatos donde cada palabra ha sido cuidadosamente elegida para crear mundos únicos y emociones auténticas.
+          </p>
+          
+          <!-- Stats -->
+          <div class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8">
+            <div class="text-center">
+              <div class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-warm-coral">{posts.length}</div>
+              <div class="text-xs sm:text-sm text-charcoal/60">Historias</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-warm-coral">25</div>
+              <div class="text-xs sm:text-sm text-charcoal/60">Años</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-warm-coral">4</div>
+              <div class="text-xs sm:text-sm text-charcoal/60">Pasiones</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts Grid -->
+    <section class="pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+          {posts.map(post => (
+            <PostCard
+              title={post.frontmatter.title}
+              summary={post.frontmatter.summary}
+              date={new Date(post.frontmatter.date)}
+              category={post.frontmatter.category}
+              tags={post.frontmatter.tags}
+              image={post.frontmatter.image}
+              slug={post.file.split('/').pop().replace('.md', '')}
+              readingTime={Math.ceil(post.compiledContent().split(' ').length / 200)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <Footer />
+</Layout>

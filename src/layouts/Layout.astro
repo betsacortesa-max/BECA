@@ -1,0 +1,49 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description = "Un espacio íntimo donde las palabras cobran vida. Creado por una artista multifacética de 25 años: escritora, pintora, diseñadora de modas y organizadora de eventos únicos.", image } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  {image && <meta property="og:image" content={image} />}
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <title>{title}</title>
+  
+  <style>
+    .prose-custom {
+      line-height: 1.75;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #FEF7F0 0%, #F5E6E8 50%, #F4C2C2 100%);
+    }
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="bg-soft-cream text-charcoal font-sans">
+  <slot />
+</body>
+</html>
